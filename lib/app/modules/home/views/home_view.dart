@@ -7,14 +7,12 @@ import 'package:dropdown_search/dropdown_search.dart';
 import 'package:dio/dio.dart';
 import '../../../data/models/province_model.dart';
 import '../../../data/models/city_model.dart';
-import '../../../constant/color.dart';
 
 class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: applightGreen,
         title: Text('Ongkos Kirim'),
         centerTitle: true,
       ),
@@ -184,9 +182,6 @@ class HomeView extends GetView<HomeController> {
                     controller.cekOngkir();
                   }
                 },
-                style: ElevatedButton.styleFrom(
-                  primary: applightGreen, // background
-                ),
                 child: Text(
                     controller.isLoading.isFalse ? "Cek Ongkir" : "Loading"),
               )),
